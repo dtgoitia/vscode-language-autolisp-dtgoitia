@@ -1,0 +1,38 @@
+{
+  "name": "language-autolisp-dtgoitia",
+  "description": "AutoLISP syntax extended",
+  "version": "0.0.0",
+  "publisher": "dtgoitia",
+  "author": {
+    "name": "David Torralba Goitia (dtgoitia)"
+  },
+  "categories": [
+    "Languages",
+    "Snippets"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattn/vscode-lisp"
+  },
+  "dependencies": {},
+  "engines": {
+    "vscode": "^0.10.10"
+  },
+  "contributes": {
+    "languages": [{
+      "id": "autolisp",
+      "aliases": ["AutoLISP", "autolisp"],
+      "extensions": [".lsp"],
+      "configuration": "./AutoLISP.configuration.json"
+    }],
+    "snippets": [{
+        "language": "autolisp",
+        "path": "./snippets/autolisp.json"
+    }]
+  },
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/mattn/vscode-lisp/issues"
+  }
+}

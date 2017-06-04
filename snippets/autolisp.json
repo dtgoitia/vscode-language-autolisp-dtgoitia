@@ -1,0 +1,83 @@
+{
+  "defun c:xx()": {
+		"prefix": "dex",
+		"body":   [
+      "(defun c:xx ()",
+      "\t$0",
+      "",
+      "\t; v0.0 - ${1:_DATE_} - First issue",
+      "\t; Author: David Torralba",
+      "\t; Last revision: ${1:_DATE_}",
+      ")"
+		]
+	},
+  "(DT:Arg function argumentList)": {
+    "prefix": "argMan",
+    "body":   "(DT:Arg '${1:functionName} '(${2:argumentList}))"
+  },
+  "argument": {
+    "prefix": "arg",
+    "body":   "(${1:argumentSymbol} '${2:argumentType})$3'"
+  },
+  "(DT:PrintVar var)": {
+    "prefix": "print",
+    "body":   "(DT:PrintVar '${1:var})"
+  },
+  "(DT:Error sym str)": {
+    "prefix":  "error",
+    "body":    "(DT:Error '${1:functionName} ${2:errorMessage})",
+    "description": "Print message on console correctly formated"
+  },
+
+
+
+
+  "defun c:1()": {
+		"prefix": "defun1",
+		"body":   "(defun c:1() $0)"
+  },
+  "issue": {
+		"prefix": "issue",
+		"body":   [
+      "\t; v0.0 - ${1:_DATE_} - First issue",
+      "\t; Author: David Torralba",
+      "\t; Last revision: ${1:_DATE_}"
+		]
+	},
+  "foreach ename": {
+		"prefix": "foreach ename",
+		"body":   [
+      "(foreach a ${1:list}",
+      "\t(if (= 'ename (type (cadr a)))",
+      "\t\t${2:single_function}",
+      "\t);END if",
+      ");END foreach"
+		]
+	},
+  "while grread": {
+		"prefix": "grread",
+		"body":   [
+        "(while (= 5 (car (setq gr (grread 't 13 0))))",
+        "\t${1:functions}",
+        ");END while"
+		]
+	},
+
+
+  "LM effectivename": {
+		"prefix": "LM effective",
+		"body":   "(LM:effectivename ${1:object})"
+  },
+  "LM VL Get Attribute Value": {
+		"prefix": "lmGetAtt",
+		"body":   "(LM:vl-getattributevalue ${1:object} ${2:attributeTag})"
+  },
+  "LM VL Get All Attribute Value": {
+		"prefix": "lmGetAtts",
+		"body":   "(LM:vl-getattributes ${1:object})"
+  },
+  "LM VL Set Attribute Value": {
+		"prefix": "lmSetAtt",
+		"body":   "(LM:vl-setattributevalue ${1:object} ${2:attributeTag} ${3:attributeValue})"
+  }
+}
