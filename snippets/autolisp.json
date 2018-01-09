@@ -28,6 +28,11 @@
     "body":    "(DT:Error '${1:functionName} ${2:errorMessage})",
     "description": "Print message on console correctly formated"
   },
+  "(DT:ZoomToEntity ename)": {
+    "prefix":  "dtZoomToEntity",
+    "body":    "(DT:ZoomToEntity ${1:ename})",
+    "description": "Zoom to entity"
+  },
 
 
 
